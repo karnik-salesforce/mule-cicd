@@ -63,18 +63,14 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
-					<cloudHubDeployment>
-						<muleVersion>4.3.0</muleVersion>
-						<username>${env.PLATFORM_USERNAME}</username>
-						<password>${env.PLATFORM_PASSWORD}</password>
-						<applicationName>hello-world-SOMETHING-UNIQUE</applicationName>
-						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>MICRO</workerType>
-						<objectStoreV2>true</objectStoreV2>
+					<cloudHub2Deployment>
+						<runtimeVersion>${app.runtime}</runtimeVersion>
+						<target>${env.TARGET_ENV}</target> <!-- your environment (e.g., Sandbox, Dev) -->
 						<region>us-east-2</region>
+						<replicas>1</replicas>
+						<applicationName>hello-world-SOMETHING-UNIQUE</applicationName>
 						<businessGroupId>${env.BUS_GROUP_ID}</businessGroupId>
-					</cloudHubDeployment>
+					</cloudHub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
