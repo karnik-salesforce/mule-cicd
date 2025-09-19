@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build and deploy artifact to sandbox
 #run the maven deploy lifecycle. The -B indicated a batch process,
-#which reduces the amount of logging the deployment does
+#which reduces the amount of logging the deployment does garbage
         run: mvn -B deploy -DmuleDeploy -s .maven/settings.xml
 #Pass in the secrets we need for deployment as environment variables
         env:
