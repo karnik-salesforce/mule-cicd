@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="git-cicd-demoFlow" doc:id="9f6ec84f-fd97-43d3-bd40-541a691a7966" >
 		<http:listener doc:name="Listener" doc:id="81745868-d632-4d1d-b3fa-b76484acc93a" config-ref="HTTP_Listener_config" path="/path"/>
-		<set-payload value='#["The Payload is this "]' doc:name="Set Payload" doc:id="f1748131-507c-465a-b7f6-0dd57d29c687" />
+		<set-payload value='#["The Payload is this  "]' doc:name="Set Payload" doc:id="f1748131-507c-465a-b7f6-0dd57d29c687" />
 		<logger level="INFO" doc:name="Logger" doc:id="a9d9f08b-e7ce-4095-9311-c76c879e210f" message="#[payload]"/>
 	</flow>
 </mule>
